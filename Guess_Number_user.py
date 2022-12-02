@@ -36,13 +36,23 @@ def computer_guess(y):
     high = y
     
     feedback = ""
-    while feedback != "c" and low != high:
-        guess = random.randint(low, high)
+    while feedback != "c":
+        if low != high:
+            guess = random.randint(low, high)
+        else:
+            guess = low
+            
+
         feedback = str(input(f"Is {guess} to high (h) ? Too low (l) ? or correct (c) ? ")).lower()
         
         # conditional structure to check if the feedback is too low
         if feedback == "h":
             # guess minus 1 because the guess is too high and we want to guess lower
+            """
+            if the computer tries to guess from 1 to 10, and it says 5,
+            and your number is 6, hes going to try 7 because the max is 10.
+            So we need to minus 1 to the guess the correct answer!
+            """
             high = guess - 1
         elif feedback == 'l':
             low = guess + 1
