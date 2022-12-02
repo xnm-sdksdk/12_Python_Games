@@ -47,6 +47,7 @@ def computer_guess(y):
         elif feedback == 'l':
             low = guess + 1
     
+    # if the computer guesses right
     print("Yay! The computer guessed your number, {0}, correctly!" .format(guess))
         
 computer_guess(10)
