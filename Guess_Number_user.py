@@ -27,3 +27,26 @@ def guess(n):
             print(f'You got it! The number was {random_number} correct!')
             print("Until next time!")
             break
+        
+# function to let computer guess a number that your think
+def computer_guess(y):
+    # between 1
+    low = 1
+    # and y
+    high = y
+    
+    feedback = ""
+    while feedback != "c" and low != high:
+        guess = random.randint(low, high)
+        feedback = str(input(f"Is {guess} to high (h) ? Too low (l) ? or correct (c) ? ")).lower()
+        
+        # conditional structure to check if the feedback is too low
+        if feedback == "h":
+            # guess minus 1 because the guess is too high and we want to guess lower
+            high = guess - 1
+        elif feedback == 'l':
+            low = guess + 1
+    
+    print("Yay! The computer guessed your number, {0}, correctly!" .format(guess))
+        
+computer_guess(10)
