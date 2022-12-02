@@ -37,10 +37,12 @@ def computer_guess(y):
     
     feedback = ""
     while feedback != "c":
+        # if low does not equal high, then the computer will guess a number between low and high which is our number
         if low != high:
             guess = random.randint(low, high)
-        else:
-            guess = low
+        else: 
+            # in this case it could be also low
+            guess = high
             
 
         feedback = str(input(f"Is {guess} to high (h) ? Too low (l) ? or correct (c) ? ")).lower()
