@@ -27,9 +27,12 @@ def guess(n):
         elif answer > random_number:
             print("Too high, try again!")
         # conditional structure to check if the guess is equal to the answer
-        else:
-            print(f"You got it! The number was {random_number}")
+        else:    
+            print(f'You got it! The number was {random_number} correct!')
+            print("Until next time!")
+            break
+            
+guess(10)       
         
-guess(10)
     #
     #
