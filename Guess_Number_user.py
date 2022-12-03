@@ -62,4 +62,4 @@ def computer_guess(y):
     # if the computer guesses right
     print("Yay! The computer guessed your number, {0}, correctly!" .format(guess))
         
-computer_guess(10)
+computer_guess(1000)
